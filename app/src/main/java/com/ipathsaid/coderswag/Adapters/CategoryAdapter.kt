@@ -34,8 +34,6 @@ class CategoryAdapter(context: Context, categories: List<Category>) : BaseAdapte
 
         }
 
-
-
         val category = categories[position]
 
         val resourceId = context.resources.getIdentifier(category.image, "drawable", context.packageName )
