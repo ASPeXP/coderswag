@@ -10,10 +10,7 @@ import android.widget.TextView
 import com.ipathsaid.coderswag.Model.Category
 import com.ipathsaid.coderswag.R
 
-class CategoryAdapter(context: Context, categories: List<Category>) : BaseAdapter(){
-
-    val context = context
-    val categories = categories
+class CategoryAdapter(val context: Context, val categories: List<Category>) : BaseAdapter(){
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
@@ -25,12 +22,12 @@ class CategoryAdapter(context: Context, categories: List<Category>) : BaseAdapte
             holder = ViewHolder()
             holder.categoryImage = categoryView.findViewById(R.id.categoryImage)
             holder.categoryName = categoryView.findViewById(R.id.categoryName)
-            println("I exist for the first time")
+       //     println("I exist for the first time")
             categoryView.tag = holder
         }else {
             holder = convertView.tag as ViewHolder
             categoryView = convertView
-            println("Go green, recycle!")
+        //    println("Go green, recycle!")
 
         }
 
